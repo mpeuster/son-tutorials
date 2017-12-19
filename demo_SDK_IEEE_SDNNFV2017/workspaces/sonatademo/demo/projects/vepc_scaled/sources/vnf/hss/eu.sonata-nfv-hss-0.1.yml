@@ -1,0 +1,34 @@
+author: Steven Van Rossem, Janos Elek, Thomas Soenen
+connection_points:
+- id: S6a
+  interface: ipv4
+  type: external
+description: HSS VNF of vEPC
+descriptor_version: vnfd-schema-01
+name: hss
+vendor: eu.sonata-nfv
+version: '0.1'
+virtual_deployment_units:
+- connection_points:
+  - id: cp01
+    interface: ipv4
+    type: external
+  id: vdu01
+  resource_requirements:
+    cpu:
+      vcpus: 1
+    memory:
+      size: 1
+      size_unit: GB
+    storage:
+      size: 1
+      size_unit: GB
+  vm_image: hss:v3
+  vm_image_format: docker
+virtual_links:
+- connection_points_reference:
+  - vdu01:cp01
+  - S6a
+  connectivity_type: E-Line
+  id: S6a
+

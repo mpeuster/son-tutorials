@@ -3,7 +3,8 @@
 sleep 1
 
 # IP setup (we need to try different names in different scenarios, but never eth0 which is the docker if)
-declare -a PORTS=("http-net-0" "http0-0" "http0-1" "http-eth0" "apache.1-eth0" "vnf-data")
+#declare -a PORTS=("che-vnf-1-eth0" "http-net-0" "http0-0" "http0-1" "http-eth0" "apache.1-eth0" "vnf-data")
+declare -a PORTS=("che-vnf-1-eth0")
 
 for p in "${PORTS[@]}"
 do
