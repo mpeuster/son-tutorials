@@ -18,6 +18,7 @@ logging.getLogger('api.openstack.neutron').setLevel(logging.DEBUG)
 logging.getLogger('api.openstack.heat').setLevel(logging.DEBUG)
 logging.getLogger('api.openstack.heat.parser').setLevel(logging.DEBUG)
 logging.getLogger('api.openstack.glance').setLevel(logging.DEBUG)
+logging.getLogger('api.openstack.helper').setLevel(logging.DEBUG)
 
 
 class DemoTopology(DCNetwork):
@@ -71,10 +72,10 @@ class DemoTopology(DCNetwork):
 
     def _create_openstack_api_endpoints(self):
         # create
-        api1 = OpenstackApiEndpoint("172.0.0.101", 6001)
-        api2 = OpenstackApiEndpoint("172.0.0.101", 6002)
-        api3 = OpenstackApiEndpoint("172.0.0.101", 6003)
-        api4 = OpenstackApiEndpoint("172.0.0.101", 6004)
+        api1 = OpenstackApiEndpoint("131.234.28.69", 6001)
+        api2 = OpenstackApiEndpoint("131.234.28.69", 6002)
+        api3 = OpenstackApiEndpoint("131.234.28.69", 6003)
+        api4 = OpenstackApiEndpoint("131.234.28.69", 6004)
         # connect PoPs
         api1.connect_datacenter(self.pop1)
         api2.connect_datacenter(self.pop2)
